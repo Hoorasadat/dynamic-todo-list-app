@@ -11,6 +11,9 @@ function App() {
   const [todos, setTodos] = useState(['Shopping', 'Cooking', 'Cleaning']);
 
   const addTaskToList = (task) => {
+    if (task === '') {
+      return;
+    }
     setTodos([...todos, task]);
   }
 
